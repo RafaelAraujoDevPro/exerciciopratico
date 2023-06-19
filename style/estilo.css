@@ -1,0 +1,336 @@
+@charset 'UTF-8';
+/* fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F3F5F9;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    position: relative;
+    padding-bottom: 4rem;
+    height: 130vh;
+}
+
+.material-symbols-outlined {/* Icone de localizção */
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.material-symbols-rounded {/* Icone de extensão */
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+
+.cabecalho {/*Cabeçalho, Logo e navegadores */
+    width: 100%;
+    height: 129vh;
+    background-color: #e7eaef;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    
+}
+.logo {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 7rem;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.navegadores {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 51.125rem;
+    height: 100%;
+    
+}
+.navegadores div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.navegadores div a {
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: 500;
+    color: #f2f3fc;
+}
+.navegadores div a:not(:last-child) {
+    margin-right: 3rem;
+}
+.navegadores div:not(:first-child) a:last-child {
+    background-color: #7157dfa1;
+    width: 8rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+}
+    
+
+
+.conceito {/* Titulo, conceito e caixa de pesquisa; */
+    position: relative;
+    z-index: 3;
+    width: 47rem;
+    padding-left: 5rem;
+    height: 300px;
+    margin: 0rem 0rem 0rem 6rem;
+}
+.conceito p { 
+    font-size: 2.6em;
+    margin-bottom: 3rem;
+    line-height: 4rem;
+}
+.conceito span {
+    font-weight: 700;
+}
+.searchBox {
+    position: relative;
+    width: 90%;
+    border-radius: 2rem;
+    height: 4.4rem;
+    background-color: #ffffff;
+}
+.searchBox input {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+    border-radius: 2rem;
+    padding-left: 2rem;
+
+}
+.searchBox button {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    background: none;
+    align-items: center;
+    display: flex;
+    top: 0;
+    right: 0.7rem;
+    border: none;
+    cursor: pointer;
+}
+.searchBox input:focus {
+    outline: none;
+}
+.searchBox button img {
+    width: 100%;
+    box-shadow: 5px 13px 30px -10px #f31287;
+    border-radius: 50%;
+}
+.banner {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ilustration { /* Ilustração*/
+    position: absolute;
+    right:10%;
+    top: 20%;
+    width: 20rem;
+    height: 30rem;
+}
+.ilustration img{
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    bottom: 0;
+}
+.ilustration img:nth-child(2){
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 50px;
+    left: 4rem;
+
+}
+
+/* cards 
+=============================================*/
+.container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    padding: 0rem 3rem;
+    position: absolute;
+    top: -29vh;
+    
+}
+.title {
+    width: 100%;
+    font-size: 1em;
+    padding-left: 15%;
+    color: #9F9FA3;
+}
+.cards {
+    position: relative;
+    width: 340px;
+    height: 460px;
+    margin: 2.1rem 2rem 4rem 2rem;
+    border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0px 7px 38px -30px #363338;
+    background-color: #fff;
+}
+.cards::after {
+    content: 'Be the first one to recommend!';
+    width:340px;
+    height: 4rem;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    color: #BBB7D2;
+    font-size: 0.7em;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s linear;
+
+}
+article:hover::after {
+    transform: translateY(100%);
+}
+article:hover .content_price a {
+    background: linear-gradient(130deg, #4E5CD4, #8148fc);
+    color: #fff;
+    box-shadow: 1px 11px 30px -10px #8148fc;
+}
+.cards figure {/* Logo das marcas */
+    width: 80%;
+    height: 9rem;
+    border-bottom: 1px solid #9F9FA3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cards ul {
+    list-style: none;
+    padding: 0 2rem;
+    width: 100%;
+}
+.cards ul li {
+    margin-bottom: 0.8rem;
+}
+
+
+.business li:first-child {/*Tipo de negócio*/
+    color: #363338;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 1em 0em;
+    margin-top: 1rem;
+}
+.business li:nth-child(2) {/*Razão Social*/
+    font-weight: 600;
+    font-size: 0.8em;
+    color: #9F9FA3;
+    margin-bottom: 0.4rem;
+}
+
+.business li:last-child{/* localização */
+    font-size: 0.7em;
+    color: #D7D6DD;
+}
+
+.business li span {
+    font-size: 1em;
+    margin-right: 0.5em;
+    color:#9F9FA3;
+}
+
+.content_price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFE;
+    width: 100%;
+    padding: 0rem 2rem 0rem 2rem;
+
+}
+.content_price a {/*Icone para link*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color:#8148fc;
+    border-radius: 50%;
+    border: 1px solid #c0b9ec;
+    background: linear-gradient(45deg, #f3f5f9, #fff);
+    text-decoration: none;
+    transition: box-shadow 1.7s linear, color 0.6s linear;
+}
+ul.price  { 
+    margin-top: 1rem;
+    padding-top: 1rem;
+    background-color: #FAFAFE;
+    width: fit-content;
+    padding: 1rem 0rem 0rem 0rem;
+    /* border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; */
+}
+
+ ul.price li:first-child {/* Preço */
+    width: 7rem;
+    color: transparent;
+    background: linear-gradient(to right, #8148fc, #4c63d68e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: 700;
+    font-size: 1.7em;
+ }
+ 
+ ul.price li:last-child {
+    color: #BBB7D2;
+    font-size: 0.7em;
+    font-weight: 500;
+    padding-bottom: 1rem;
+ }
+
